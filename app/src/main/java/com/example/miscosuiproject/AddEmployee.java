@@ -1,29 +1,18 @@
 package com.example.miscosuiproject;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.miscosuiproject.databinding.FragmentAddEmployeeBinding;
-import com.example.miscosuiproject.databinding.FragmentEmployeeDetailBinding;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class AddEmployee extends Fragment {
@@ -55,12 +44,21 @@ public class AddEmployee extends Fragment {
 
     private void reduceDraawbleImageSize() {
         // Apply compound drawable modifications
-        setCompoundDrawable(binding.firstName);
-        setCompoundDrawable(binding.middleName);
-        setCompoundDrawable(binding.lastName);
-        setCompoundDrawable(binding.address);
-        setCompoundDrawable(binding.number);
-        setCompoundDrawable(binding.email);
+        setCompoundDrawable(binding.firstName,getResources().getDrawable(R.drawable.user_image));
+        setCompoundDrawable(binding.middleName,getResources().getDrawable(R.drawable.user_image));
+        setCompoundDrawable(binding.lastName,getResources().getDrawable(R.drawable.user_image));
+        setCompoundDrawable(binding.address,getResources().getDrawable(R.drawable.gps));
+        setCompoundDrawable(binding.number,getResources().getDrawable(R.drawable.call));
+        setCompoundDrawable(binding.email,getResources().getDrawable(R.drawable.email));
+        //etCompoundDrawable(binding.roles);
+        setCompoundDrawable2(binding.roles, getResources().getDrawable(R.drawable.briefcase));
+        setCompoundDrawable2(binding.existingRoles, getResources().getDrawable(R.drawable.briefcase));
+        setCompoundDrawable2(binding.gisDrones, getResources().getDrawable(R.drawable.briefcase));
+        setCompoundDrawable2(binding.headOfDept, getResources().getDrawable(R.drawable.briefcase));
+        setCompoundDrawable2(binding.existingAllocatedRole, getResources().getDrawable(R.drawable.briefcase));
+//        setCompoundDrawable2(binding.existingRoles, getResources().getDrawable(R.drawable.briefcase));
+//        setCompoundDrawable2(binding.roles, getResources().getDrawable(R.drawable.briefcase));
+
     }
 
     private void showCustomAlertDialog() {
@@ -114,23 +112,28 @@ public class AddEmployee extends Fragment {
 
 
     }
+    private void setCompoundDrawable2(AutoCompleteTextView editText, Drawable drawable) {
+        // Set the width and height for the drawable (adjust values as needed)
+        drawable.setBounds(0, 0, 70, 70);
 
-    private void setCompoundDrawable(TextInputEditText editText) {
-        // Get the Drawable from the TextInputEditText's compound drawables
-        Drawable[] drawables = editText.getCompoundDrawables();
+        // Set the compound drawable to the left of the TextInputEditText
+        editText.setCompoundDrawablesRelative(drawable, null, null, null);
 
-        // Check if the left compound drawable is not null
-        if (drawables[0] != null) {
-            // Set the width and height for the drawable (adjust values as needed)
-            drawables[0].setBounds(0, 0, 70, 70);
-
-            // Set the updated compound drawables back to the TextInputEditText
-            editText.setCompoundDrawables(drawables[0], null, null, null);
-
-            // Set visibility
-            editText.setVisibility(View.VISIBLE);
-        }
+        // Set visibility
+        editText.setVisibility(View.VISIBLE);
     }
+
+    private void setCompoundDrawable(TextInputEditText editText, Drawable drawable) {
+        // Set the width and height for the drawable (adjust values as needed)
+        drawable.setBounds(0, 0, 70, 70);
+
+        // Set the updated compound drawables back to the TextInputEditText
+        editText.setCompoundDrawables(drawable, null, null, null);
+
+        // Set visibility
+        editText.setVisibility(View.VISIBLE);
+    }
+
 
 
 

@@ -80,7 +80,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:cursorVisible="true"
-                            android:drawableLeft="@drawable/user_image"
                             android:drawablePadding="5dp"
                             android:hint="@string/first_name"
                             android:inputType="text"
@@ -104,7 +103,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:cursorVisible="true"
-                            android:drawableLeft="@drawable/user_image"
                             android:drawablePadding="5dp"
                             android:hint="@string/middle_name"
                             android:inputType="text"
@@ -127,7 +125,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:cursorVisible="true"
-                            android:drawableLeft="@drawable/user_image"
                             android:drawablePadding="5dp"
                             android:hint="@string/last_name"
                             android:inputType="text"
@@ -151,7 +148,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:cursorVisible="true"
-                            android:drawableLeft="@drawable/gps"
                             android:drawablePadding="5dp"
                             android:hint="@string/address"
                             android:inputType="text"
@@ -175,7 +171,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:cursorVisible="true"
-                            android:drawableLeft="@drawable/call"
                             android:drawablePadding="5dp"
                             android:hint="@string/mobile_number"
                             android:inputType="number"
@@ -204,8 +199,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:cursorVisible="true"
-                            android:drawableLeft="@drawable/email"
                             android:drawablePadding="5dp"
+
                             android:hint="@string/email"
                             android:inputType="textEmailAddress"
                             android:textCursorDrawable="@null" />
@@ -227,21 +222,25 @@
                         android:textSize="@dimen/_12sdp"
                         android:textStyle="bold" />
 
-
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
+
                         app:boxStrokeColor="@color/black"
-                        app:hintTextColor="@color/blue">
+                        app:hintTextColor="@color/blue"
+                     >
 
                         <AutoCompleteTextView
                             android:id="@+id/roles"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/roles"
-                            android:inputType="none" />
+                            android:drawablePadding="5dp"
+                            android:inputType="none"
+                             />
+                        <!-- Adjust height as needed -->
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -255,6 +254,7 @@
                         <AutoCompleteTextView
                             android:id="@+id/existing_roles"
                             android:layout_width="match_parent"
+                            android:drawablePadding="5dp"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
                             android:hint="@string/existing_roles2"
@@ -273,6 +273,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
+                            android:drawablePadding="5dp"
                             android:hint="@string/head_of_department"
                             android:inputType="none" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -289,6 +290,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
+                            android:drawablePadding="5dp"
                             android:hint="@string/gis_drone"
                             android:inputType="none" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -305,6 +307,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
+                            android:drawablePadding="5dp"
                             android:hint="@string/existing_roles"
                             android:inputType="none" />
                     </com.google.android.material.textfield.TextInputLayout>
