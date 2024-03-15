@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:id="@+id/toolbar"
@@ -20,9 +22,10 @@
                 android:id="@+id/close"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/close" />
+                android:src="@drawable/close"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/heading"
@@ -30,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="20dp"
-                android:text="Select Roles"
+                android:text="@string/select_roles"
                 android:fontFamily="@font/roboto_bold"
 
                 android:textColor="@color/white"
@@ -46,8 +49,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/toolbar">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -60,10 +62,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="@dimen/_12sdp"
-                        android:textColor="#DF0952"
+                        android:textColor="@color/grey_90"
                         android:fontFamily="@font/roboto_medium"
                         android:layout_marginBottom="10dp"
-                        android:text="Please Assign the Roles (Multi Selectable) At least Select One : "
+                        android:text="@string/please_assign_the_roles_multi_selectable_at_least_select_one"
                         />
                     <View
                         android:layout_width="match_parent"
@@ -78,7 +80,7 @@
                         android:checked="false"
                         android:fontFamily="@font/roboto_bold"
                         android:textSize="@dimen/_10sdp"
-                        android:text="Human Resources" />
+                        android:text="@string/human_resources" />
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -92,8 +94,7 @@
                         android:textStyle="bold"
                         android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/roboto_bold"
-
-                        android:text="Management - Finance" />
+                        android:text="@string/management_finance" />
 
                     <CheckBox
                         android:id="@+id/checkbox3"
@@ -103,7 +104,7 @@
                         android:textStyle="bold"
                         android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/roboto_bold"
-                        android:text="Management - Admin" />
+                        android:text="@string/management_admin" />
                     <CheckBox
                         android:id="@+id/checkbox4"
                         android:layout_width="wrap_content"
@@ -113,7 +114,7 @@
                         android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/roboto_bold"
 
-                        android:text="Management - Project" />
+                        android:text="@string/management_project" />
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -128,7 +129,7 @@
 
                         android:textStyle="bold"
                         android:textSize="@dimen/_10sdp"
-                        android:text="Project Authority" />
+                        android:text="@string/project_authority" />
 
                     <CheckBox
                         android:id="@+id/checkbox6"
@@ -139,7 +140,7 @@
                         android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/roboto_bold"
 
-                        android:text="Project Manager" />
+                        android:text="@string/project_manager" />
 
                     <CheckBox
                         android:id="@+id/checkbox7"
@@ -149,8 +150,8 @@
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto_bold"
 
-                        android:textSize="10sdp"
-                        android:text="Head Of Department" />
+                        android:textSize="@dimen/_10sdp"
+                        android:text="@string/head_of_department" />
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -165,7 +166,7 @@
 
                         android:textStyle="bold"
                         android:textSize="@dimen/_10sdp"
-                        android:text="Employee Under Department" />
+                        android:text="@string/employee_under_department" />
 
                     <CheckBox
                         android:id="@+id/checkbox9"
@@ -175,18 +176,18 @@
                         android:fontFamily="@font/roboto_bold"
                         android:textStyle="bold"
                         android:textSize="@dimen/_10sdp"
-                        android:text="Employee Under Project Manager" />
+                        android:text="@string/employee_under_project_manager" />
                     <androidx.appcompat.widget.AppCompatButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/assignRolesBtn"
-                        android:text="Assign Roles"
+                        android:text="@string/assign_roles"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/roboto_bold"
                         android:layout_marginBottom="20dp"
                         android:background="@color/orange_400"
                         android:textAllCaps="false"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
             </RelativeLayout>
             <!-- Add more checkboxes as needed -->

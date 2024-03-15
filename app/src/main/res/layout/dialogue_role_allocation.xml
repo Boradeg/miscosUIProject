@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:id="@+id/toolbar"
@@ -30,11 +32,12 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="20dp"
-                android:text="Allocated To Project Managers"
+                android:text="@string/allocated_to_project_managers"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold"
-                android:visibility="visible" />
+                android:visibility="visible"
+                tools:ignore="RelativeOverlap" />
 
         </RelativeLayout>
         <ScrollView
@@ -44,8 +47,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/toolbar">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -58,9 +60,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="@dimen/_12sdp"
-                        android:textColor="#DF0952"
+                        android:textColor="@color/grey_90"
                         android:layout_marginBottom="10dp"
-                        android:text="Please Assign the Roles (Multi Selectable) At least Select One : "
+                        android:text="@string/please_assign_the_roles_multi_selectable_at_least_select_one"
                         />
                     <LinearLayout
                         android:id="@+id/checkboxLayout"
@@ -75,47 +77,45 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="false"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_bold"
                         android:textSize="@dimen/_10sdp"
-                        android:text="Ayush Saxena" />
+                        android:text="@string/ayush_saxena" />
 
                     <CheckBox
                         android:id="@+id/checkbox3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="false"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_bold"
                         android:textSize="@dimen/_10sdp"
-
-                        android:text="Smitha Pawar" />
+                        android:text="@string/smitha_pawar" />
 
                     <CheckBox
                         android:id="@+id/checkbox4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="false"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_bold"
                         android:textSize="@dimen/_10sdp"
-
-                        android:text="Sachin Anarthe" />
+                        android:text="@string/sachin_anarthe" />
 
                     <CheckBox
                         android:id="@+id/checkbox5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="false"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_bold"
                         android:textSize="@dimen/_10sdp"
-                        android:text="Sushant iyengar" />
+                        android:text="@string/sushant_iyengar" />
 
                     <CheckBox
                         android:id="@+id/checkbox6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="false"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_bold"
                         android:textSize="@dimen/_10sdp"
-                        android:text="Suraj Suryavanshi" />
+                        android:text="@string/suraj_suryavanshi" />
 
 
 
@@ -123,11 +123,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/assignRolesBtn"
-                        android:text="Assign Roles"
+                        android:text="@string/assign_roles"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
                         android:background="@color/orange_400"
                         android:textAllCaps="false"
+                        android:fontFamily="@font/roboto_bold"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </RelativeLayout>

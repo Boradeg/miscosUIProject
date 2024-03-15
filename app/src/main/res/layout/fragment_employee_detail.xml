@@ -1,95 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".employeeDetail">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        tools:ignore="UselessParent">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:background="#344771"
-        android:id="@+id/toolbar"
-        >
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#344771"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="30dp"
-            android:layout_marginTop="8dp"
-            android:layout_alignParentLeft="true"
-            android:layout_height="30dp"
-            android:src="@drawable/back" />
 
-        <TextView
-            android:id="@+id/heading"
-            android:layout_width="wrap_content"
-            android:visibility="visible"
-            android:textStyle="bold"
-            android:layout_marginStart="20dp"
-            android:layout_toRightOf="@+id/icon"
-            android:layout_centerVertical="true"
-            android:layout_height="wrap_content"
-            android:text="Employee"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/employee"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:ignore="RtlHardcoded" />
 
-    </RelativeLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/searchViewLayout"
-    android:layout_below="@id/toolbar"
-    android:background="@color/white"
-    >
+        </RelativeLayout>
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchView"
+        <RelativeLayout
+            android:id="@+id/searchViewLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:background="@color/white">
 
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/searchview_background"
-            app:iconifiedByDefault="false"
-            app:queryHint="Search by Employee Name" />
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/searchview_background"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search by Employee Name" />
 
-</RelativeLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_below="@+id/searchViewLayout"
-    android:background="@color/white"
-    android:layout_height="match_parent">
+        </RelativeLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/recyclerView"
-    tools:listitem="@layout/item_rv"
-    />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchViewLayout"
+            android:background="@color/white">
 
-</RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_rv" />
+
+        </RelativeLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addEmployeeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/addEmployeeButton"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_margin="20dp"
+            android:contentDescription="@string/add"
             android:src="@drawable/plus"
-            android:contentDescription="Add"
             app:backgroundTint="#F4DC08"
             app:fabSize="normal"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Round" />

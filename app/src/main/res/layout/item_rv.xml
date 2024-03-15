@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="7dp"
@@ -49,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/image_layout">
+            android:layout_toEndOf="@+id/image_layout">
 
 
             <TextView
@@ -59,7 +60,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="3dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Ayush Saxena"
+                android:text="@string/ayush_saxena"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
@@ -72,9 +73,10 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
-                android:layout_toRightOf="@id/userName"
+                android:layout_toEndOf="@id/userName"
                 android:baselineAlignBottom="true"
-                android:src="@drawable/edit" />
+                android:src="@drawable/edit"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/userRole"
@@ -94,9 +96,11 @@
                 android:layout_height="12dp"
                 android:layout_below="@id/userName"
                 android:layout_marginStart="4dp"
-                android:layout_toRightOf="@id/userRole"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/userRole"
                 android:baselineAlignBottom="true"
-                android:src="@drawable/draw" />
+                android:src="@drawable/draw"
+                tools:ignore="ContentDescription" />
 
 
         </RelativeLayout>
