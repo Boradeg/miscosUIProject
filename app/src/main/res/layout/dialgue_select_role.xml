@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#344771"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/close" />
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="Select Roles"
+                android:fontFamily="@font/roboto_bold"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+        <ScrollView
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="#DF0952"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginBottom="10dp"
+                        android:text="Please Assign the Roles (Multi Selectable) At least Select One : "
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_40"
+                        android:layout_marginTop="20dp"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkbox1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Human Resources" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_40"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkbox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+
+                        android:text="Management - Finance" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Management - Admin" />
+                    <CheckBox
+                        android:id="@+id/checkbox4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+
+                        android:text="Management - Project" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_40"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkbox5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:fontFamily="@font/roboto_bold"
+
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Project Authority" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+
+                        android:text="Project Manager" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_bold"
+
+                        android:textSize="10sdp"
+                        android:text="Head Of Department" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_40"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkbox8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:fontFamily="@font/roboto_bold"
+
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Employee Under Department" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Employee Under Project Manager" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/assignRolesBtn"
+                        android:text="Assign Roles"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/orange_400"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- Add more checkboxes as needed -->
+
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>
