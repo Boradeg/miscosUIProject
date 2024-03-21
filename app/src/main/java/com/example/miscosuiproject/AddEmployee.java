@@ -1,5 +1,6 @@
 package com.example.miscosuiproject;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -42,6 +43,7 @@ public class AddEmployee extends Fragment {
         return binding.getRoot();
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private void reduceDraawbleImageSize() {
         // Apply compound drawable modifications
         setCompoundDrawable(binding.firstName,getResources().getDrawable(R.drawable.user_image));
